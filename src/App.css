@@ -1,38 +1,123 @@
-.App {
-  text-align: center;
+.app {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.line {
+  height: 0.5px;
+  background-color: white;
+  display: none;
+}
+.line1 {
+  width: 100px;
+  top: 48px;
+  left: 146px;
+  rotate: 100deg;
+  position: absolute;
+}
+.line2 {
+  width: 50px;
+  bottom: 17.5px;
+  right: 50px;
+  rotate: 130deg;
+  position: absolute;
+}
+.line3 {
+  width: 250px;
+  top: 173px;
+  left: -18px;
+  rotate: 150deg;
+  position: absolute;
+}
+.line4 {
+  width: 665px;
+  position: absolute;
+  top: 50%;
+  right: -5.3%;
+  rotate: 25deg;
+}
+.line5 {
+  width: 270px;
+  top: 102px;
+  right: -40px;
+  rotate: 130deg;
+  position: absolute;
+}
+.line6 {
+  width: 120px;
+  bottom: 58px;
+  right: 173px;
+  rotate: 90deg;
+  position: absolute;
+}
+.line7 {
+  width: 170px;
+  bottom: 78px;
+  left: 106px;
+  rotate: 70deg;
+  position: absolute;
+}
+.line8 {
+  width: 140px;
+  top: 52px;
+  right: 73px;
+  rotate: 50deg;
+  position: absolute;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card {
+  position: relative;
+  overflow: visible;
+  background-color: #3a3c3d;
+  width: 600px;
+  height: 300px;
+  border-radius: 12px;
+  display: flex;
+  border: 2px solid #3a3c3d;
+  background-position: center;
+  background-size: contain;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.profile_icon_container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile_info_container {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.profile_info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   color: white;
+  margin-bottom: 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.label {
+  font-size: 14px;
+  color: #adb5bd;
+  margin: 0;
+}
+.data {
+  font-size: 14px;
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.profile_icon {
+  width: 180px;
+  height: 180px;
+  background-image: url("/public/profile_icon.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
