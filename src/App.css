@@ -16,79 +16,18 @@
   align-items: center;
 }
 
-.line {
-  height: 0.5px;
-  background-color: white;
-  display: none;
-}
-.line1 {
-  width: 100px;
-  top: 48px;
-  left: 146px;
-  rotate: 100deg;
-  position: absolute;
-}
-.line2 {
-  width: 50px;
-  bottom: 17.5px;
-  right: 50px;
-  rotate: 130deg;
-  position: absolute;
-}
-.line3 {
-  width: 250px;
-  top: 173px;
-  left: -18px;
-  rotate: 150deg;
-  position: absolute;
-}
-.line4 {
-  width: 665px;
-  position: absolute;
-  top: 50%;
-  right: -5.3%;
-  rotate: 25deg;
-}
-.line5 {
-  width: 270px;
-  top: 102px;
-  right: -40px;
-  rotate: 130deg;
-  position: absolute;
-}
-.line6 {
-  width: 120px;
-  bottom: 58px;
-  right: 173px;
-  rotate: 90deg;
-  position: absolute;
-}
-.line7 {
-  width: 170px;
-  bottom: 78px;
-  left: 106px;
-  rotate: 70deg;
-  position: absolute;
-}
-.line8 {
-  width: 140px;
-  top: 52px;
-  right: 73px;
-  rotate: 50deg;
-  position: absolute;
-}
-
 .card {
   position: relative;
   overflow: visible;
   background-color: #3a3c3d;
   width: 600px;
   height: 300px;
-  border-radius: 12px;
+  border-radius: 20px;
   display: flex;
-  border: 2px solid #3a3c3d;
   background-position: center;
   background-size: contain;
+  box-shadow: inset -4px -4px 20px rgb(19, 19, 19),
+    inset 2px 2px 8px rgb(19, 19, 19);
 }
 .profile_icon_container {
   flex: 1;

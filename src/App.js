@@ -1,41 +1,32 @@
 import "./App.css";
 import useMouse from "@react-hook/mouse-position";
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 
 const profileInfos = [
   { label: "Name", data: "Peter Szalma" },
-  { label: "Role", data: "Junior Fullstack Developer" },
-  { label: "Email", data: "peter.szalma@dakai.io" },
+  { label: "Role", data: "Frontend Developer" },
+  { label: "Email", data: "test@gmail.com" },
   { label: "Phone", data: "123456678" },
   { label: "Introduction", data: "Hi, I'm Peter." },
 ];
 
 function App() {
   const ref = useRef(null);
-  const ref2 = useRef(null);
-  const position = useMouse(ref2);
   const { x, y } = useMouse(ref);
 
   return (
     <div className="app">
-      <div ref={ref2} className="container">
+      <div className="container">
         <div
           ref={ref}
           className="card"
           style={
             x === null && y === null
-              ? Math.abs(position.x) !== null || Math.abs(position.y) !== null
-                ? {
-                    transition: "ease-in",
-                    position: "absolute",
-                    top: position.pageY + position.y + "px",
-                    left: position.pageX + position.x + "px",
-                  }
-                : {
-                    transition:
-                      "all 3000ms cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s",
-                    transform: `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`,
-                  }
+              ? {
+                  transition:
+                    "all 3000ms cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s",
+                  transform: `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`,
+                }
               : {
                   transition:
                     "all 3000ms cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s",
@@ -46,7 +37,7 @@ function App() {
           }
         >
           <div className="profile_icon_container">
-            <div className="profile_icon"></div>
+            <div className="profile_icon" />
           </div>
           <div className="profile_info_container">
             {profileInfos.map((profileInfo) => (
@@ -56,6 +47,9 @@ function App() {
               </div>
             ))}
           </div>
+          {/* <div className="white_line" />
+          <div className="white_line_2" />
+          <div className="white_line_3" /> */}
         </div>
       </div>
     </div>
